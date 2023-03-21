@@ -1,0 +1,69 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 头部导航区域 -->
+  <view class="home_container">
+    <!--  -->
+    <Header imgSrc="https://tdesign.gtimg.com/miniprogram/images/avatar1.png"/>
+    <!-- 客服组件 -->
+    <view class="service_zone">
+      <t-icon
+        name='add-circle'
+        size="48rpx"
+        data-name="desktop"
+        data-type="prefix"
+      />
+    </view>
+    <!-- 店铺头像 -->
+    <view class="shop_zone">
+      <view class="shop_container">
+        <view class="shop_image">
+          <t-avatar
+            image="https://tdesign.gtimg.com/miniprogram/images/avatar1.png"
+            shape="circle"
+            size="48px"
+          />
+        </view>
+        <view class="shop_info">
+          <text class="shop_name">安吉白茶店铺</text>
+          <text class="shop_des">免费配送</text>
+        </view>
+        <view class="shop_show_more">
+          <t-icon
+            name='chevron-down'
+            size="48rpx"
+            data-name="desktop"
+            data-type="prefix"
+          />
+        </view>
+      </view>
+      
+    </view>
+  </view>
+  <!-- 内容区域 -->
+  <view class="side-bar-wrapper">
+    <t-side-bar value="{{sideBarIndex}}" bind:change="onSideBarChange">
+      <t-side-bar-item
+        wx:for="{{categories}}"
+        wx:key="index"
+        value="{{item.value || index}}"
+        label="{{item.label}}"
+        badge-props="{{item.badgeProps}}"
+      />
+    </t-side-bar>
+    <scroll-view class="content" scroll-y scroll-with-animation scroll-top="{{scrollTop}}" bind:scroll="onScroll">
+      <view wx:for="{{categories}}" wx:key="index" class="section">
+        <view class="title">{{item.title || item.label}}</view>
+        <t-grid column="{{3}}" border="{{false}}">
+          <block wx:for="{{item.items}}" wx:key="index" wx:for-item="cargo">
+            <t-grid-item
+              text="{{cargo.label}}"
+              image="{{cargo.image}}"
+              image-props="{{ { shape: 'round', lazy: true } }}"
+            >
+            </t-grid-item>
+          </block>
+        </t-grid>
+      </view>
+    </scroll-view>
+  </view>
+</view>
