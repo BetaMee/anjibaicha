@@ -1,0 +1,14 @@
+.home_service_nav {
+  /* position: fixed; */
+  width: 100%;
+  /* z-index: 1000000000; */
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.service_nav_icon {
+  padding-left: 24px;
+}

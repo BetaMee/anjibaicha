@@ -2,17 +2,8 @@
 <view class="container">
   <!-- 头部导航区域 -->
   <view class="home_container">
-    <!--  -->
-    <Header imgSrc="https://tdesign.gtimg.com/miniprogram/images/avatar1.png"/>
     <!-- 客服组件 -->
-    <view class="service_zone">
-      <t-icon
-        name='add-circle'
-        size="48rpx"
-        data-name="desktop"
-        data-type="prefix"
-      />
-    </view>
+    <HomeServiceHeader />
     <!-- 店铺头像 -->
     <view class="shop_zone">
       <view class="shop_container">
@@ -36,7 +27,12 @@
           />
         </view>
       </view>
-      
+      <view class="shop_pay_qrcode">
+        <t-icon
+          name='qrcode'
+          size="64rpx"
+      />
+      </view>
     </view>
   </view>
   <!-- 内容区域 -->

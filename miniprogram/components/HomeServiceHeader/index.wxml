@@ -1,0 +1,9 @@
+<view class="home_service_nav" style="height: {{navHeight}}px;">
+  <view class="service_nav_icon">
+    <t-icon
+      name='add-circle'
+      size="48rpx"
+      data-name="desktop"
+    />
+  </view>
+</view>
