@@ -4,16 +4,16 @@ App({
     const { height, top } = wx.getMenuButtonBoundingClientRect();
     //  获取手机系统信息
     wx.getSystemInfo({
-      success:res => {
-        console.log('res', res)
+      success: res => {
+        // 参考：https://blog.csdn.net/qq_48085286/article/details/120982572
         //手机状态栏高度
         const statusBarHeight  = res.statusBarHeight;
         //导航高度
         this.globalData.navHeight =  statusBarHeight +  height  + (top -  statusBarHeight)*2;
-        this.globalData.navTop  = top;
-        this.globalData.navButtonHeight =  height;
+        this.globalData.navTop  = top; // 胶囊距离顶部距离
+        this.globalData.navButtonHeight =  height; // 胶囊本身的高度
 
-        console.log('this.globalData', this.globalData)
+        console.log('this.globalData', this.globalData, res.statusBarHeight)
       },
       fail(err) {
         console.log(err);

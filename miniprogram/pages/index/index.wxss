@@ -1,9 +1,6 @@
 /**index.wxss**/
-
 page {
-  padding-top: 54rpx;
   background-color: #f6f6f6;
-  padding-bottom: 60rpx;
 }
 
 .home_container {
@@ -15,8 +12,9 @@ page {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 24px;
-  height: 20vh;
+  padding: 0 24px;
+  height: 75px;
+  margin-bottom: 12px;
 }
 
 .shop_image {
@@ -54,10 +52,72 @@ page {
   margin-left: 24px;
 }
 
-/* 商品选项 */
-.side-bar-wrapper {
+.shop_content_wrapper {
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+  box-sizing: border-box;
+  padding: 24px 12px 12px 24px;
+}
+
+.shop_content_my_order {
   display: flex;
-  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.shop_content_list {
+
+}
+
+.shop_content_item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shop_content_item_image {
+  border-radius: 6px;
+  width: 76px;
+  height: 76px;
+}
+
+.shop_content_item_image cover-image {
+  width: 100%;
+  height: 100%;
+}
+
+.shop_content_item_product {
+  display: flex;
+  flex-direction: row;
+}
+
+.shop_content_item_des {
+  margin-left: 24px;
+}
+
+.shop_content_item_title {
+  padding-bottom: 4px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.shop_content_item_price {
+  font-weight: 700;
+  font-size: 16px;
+  color: #fa5151;
+}
+
+.shop_content_item_select {}
+
+/* 商品选项 */
+/* .side-bar-wrapper {
+  display: flex;
+  border-radius: 6px 6px 0 0;
+  background-color: red;
 }
 
 .side-bar-wrapper .content {
@@ -77,4 +137,4 @@ page {
 .side-bar-wrapper .image {
   width: 96rpx;
   height: 96rpx;
-}
+} */

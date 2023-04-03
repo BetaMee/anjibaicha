@@ -36,7 +36,32 @@
     </view>
   </view>
   <!-- 内容区域 -->
-  <view class="side-bar-wrapper">
+  <view class="shop_content_wrapper" style="height: calc(100vh - {{navHeight}}px - 75px - 12px)">
+    <!-- 我的订单 -->
+    <view class="shop_content_my_order">
+      <view>免配送费</view>
+      <view>我的订单</view>
+    </view>
+    <!-- 产品列表 -->
+    <scroll-view class="shop_content_list" scroll-y scroll-with-animation>
+      <view wx:for="{{categories}}" wx:key="index" class="shop_content_item">
+        <!-- 产品介绍 -->
+        <view class="shop_content_item_product">
+          <!-- 图片 -->
+          <view class="shop_content_item_image">
+            <cover-image src="https://tdesign.gtimg.com/miniprogram/images/example2.png" alt=""/>
+          </view>
+          <view class="shop_content_item_des">
+            <view class="shop_content_item_title">c级安吉白茶500g</view>
+            <view class="shop_content_item_price">¥618.00</view>
+          </view>
+        </view>
+        <!-- 添加到购物车里 -->
+        <view class="shop_content_item_select">1</view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- <view class="side-bar-wrapper" style="height: calc(100vh - {{navHeight}}px - 75px - 12px)">
     <t-side-bar value="{{sideBarIndex}}" bind:change="onSideBarChange">
       <t-side-bar-item
         wx:for="{{categories}}"
@@ -61,5 +86,5 @@
         </t-grid>
       </view>
     </scroll-view>
-  </view>
+  </view> -->
 </view>
