@@ -9,6 +9,10 @@ Page({
 		navTop: app.globalData.navTop,
     // 是否展示店铺信息浮层
     isShowShopInfo: false,
+    // 是否展示购物车图标
+    isShowAddCart: false,
+    // 是否展示产品卡片
+    isShowProductInfo: false,
     categories: [
       {
         label: '选项一',
@@ -91,6 +95,18 @@ Page({
   onShopInfoVisibleChange(e) {
     this.setData({
       isShowShopInfo: e.detail.visible,
+    });
+  },
+  // 点击产品项，展示具体的产品细节
+  onShowProductDetail() {
+    this.setData({
+      isShowProductInfo: true
+    });
+  },
+  // 关闭产品卡片
+  onProductVisibleChange(e) {
+    this.setData({
+      isShowProductInfo: e.detail.visible,
     });
   }
 });

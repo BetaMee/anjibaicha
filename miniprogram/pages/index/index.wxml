@@ -7,7 +7,7 @@
       <!-- 客服组件 -->
       <view class="shop_service_nav" style="height: {{navHeight}}px; padding-top: {{navTop}}px">
         <t-icon
-          name='add-circle'
+          name='service'
           color="#f6f6f6"
           size="48rpx"
         />
@@ -54,7 +54,8 @@
       <view class="shop_content_my_order_entry">
         <t-icon
           name='bulletpoint'
-          size="24rpx"
+          size="32rpx"
+          color="#1677ff"
         />
         <text>我的订单</text>
       </view>
@@ -63,13 +64,14 @@
     <scroll-view class="shop_content_list" scroll-y="true" scroll-with-animation>
       <view wx:for="{{categories}}" wx:key="index" class="shop_content_item">
         <!-- 产品介绍 -->
-        <view class="shop_content_item_product">
+        <view class="shop_content_item_product" bindtap="onShowProductDetail">
           <!-- 图片 -->
           <view class="shop_content_item_image">
-            <cover-image src="https://tdesign.gtimg.com/miniprogram/images/example2.png" alt=""/>
+            <image src="https://tdesign.gtimg.com/miniprogram/images/example2.png" alt="" mode="aspectFill"/>
           </view>
-          <view class="shop_content_item_des">
+          <view class="shop_content_item_block">
             <view class="shop_content_item_title">c级安吉白茶500g</view>
+            <view class="shop_content_item_des">这是一些描述</view>
             <view class="shop_content_item_price">¥618.00</view>
           </view>
         </view>
@@ -94,5 +96,14 @@
   <ShopInfoPopup
     visible="{{isShowShopInfo}}"
     bind:onVisibleChange="onShopInfoVisibleChange"
+  />
+  <!-- 产品详情浮层 -->
+  <ProductDetailPopup
+    visible="{{isShowProductInfo}}"
+    bind:onVisibleChange="onProductVisibleChange"
+  />
+  <!-- 添加购物车浮层 -->
+  <AddCartPopup
+    visible="{{isShowAddCart}}"
   />
 </view>

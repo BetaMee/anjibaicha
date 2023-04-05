@@ -1,0 +1,25 @@
+<t-popup visible="{{visible}}" placement="{{'bottom'}}" bind:visible-change="onVisibleChange">
+  <view class="product_detail_popup">
+    <!-- 产品大图 -->
+    <view class="product_detail_popup_image">
+      <image src="https://tdesign.gtimg.com/miniprogram/images/example2.png" mode="aspectFill" />
+    </view>
+    <!-- 产品价格 -->
+    <view class="product_detail_popup_info">
+      <view class="product_detail_popup_add_info_detail">
+        <view class="product_detail_popup_add_info_name">
+          C级安吉白茶500g
+        </view>
+        <view class="product_detail_popup_add_info_price">
+          ¥618.00
+        </view>
+      </view>
+      <view>分享</view>
+    </view>
+    <!-- 加入购物车 -->
+    <view class="product_detail_popup_add_cart">
+      <t-button size="medium" icon="cart" theme="danger" content="加入购物车">
+      </t-button>
+    </view>
+  </view>
+</t-popup>

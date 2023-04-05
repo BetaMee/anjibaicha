@@ -12,7 +12,7 @@
   background-repeat: no-repeat;
   background-size: 150% 150%;
   background-position: center;
-  filter: blur(6px) brightness(0.40) opacity(80%);
+  filter: blur(8px) brightness(0.30) opacity(80%);
   /* 移除 blur 白边 */
   transform: scale(1.1);
 }

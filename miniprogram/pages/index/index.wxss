@@ -81,7 +81,7 @@ page {
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 12px 12px 24px;
+  padding: 0px 12px 32px 12px;
   display: flex;
   flex-direction: column;
 }
@@ -114,11 +114,16 @@ page {
   align-items: center;
 }
 
+.shop_content_my_order_entry text {
+  color: #1677ff;
+  margin-left: 4px;
+}
+
 .shop_content_list {
   flex: 1;
   overflow: scroll;
   width: 100%;
-  padding-top: 12px;
+  padding: 12px 0;
 }
 
 .shop_content_item {
@@ -133,11 +138,11 @@ page {
 .shop_content_item_image {
   border-radius: 6px;
   overflow: hidden;
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 120px;
 }
 
-.shop_content_item_image cover-image {
+.shop_content_item_image image {
   width: 100%;
   height: 100%;
 }
@@ -147,8 +152,14 @@ page {
   flex-direction: row;
 }
 
-.shop_content_item_des {
+.shop_content_item_block {
   margin-left: 24px;
+}
+
+.shop_content_item_des {
+  color: #666;
+  font-size: 16px;
+  padding-bottom: 4px;
 }
 
 .shop_content_item_title {
