@@ -78,12 +78,13 @@
         <!-- 添加到购物车里 -->
         <view class="shop_content_item_select">
           <t-icon
-            name='add-rectangle'
+            name='minus-rectangle'
             size="24px"
             data-type="prefix"
           />
           <view>10</view>
           <t-icon
+            bind:click="onShowAddCart"
             name='add-rectangle'
             size="24px"
             data-type="prefix"
@@ -105,5 +106,6 @@
   <!-- 添加购物车浮层 -->
   <AddCartPopup
     visible="{{isShowAddCart}}"
+    bind:onVisibleChange="onAddCartVisibleChange"
   />
 </view>

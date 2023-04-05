@@ -1,0 +1,22 @@
+<t-popup visible="{{visible}}" placement="{{'bottom'}}" bind:visible-change="onVisibleChange">
+  <view class="add_cart_popup">
+    <view class="add_cart_popup_price">
+      <!-- 购物车图标 -->
+      <view class="add_cart_popup_icon">
+        <t-icon
+          name='cart'
+          size="28px"
+          color="#fa5151"
+        />
+      </view>
+      <!-- 价格信息 -->
+      <view class="add_cart_popup_total_txt">合计</view>
+      <view class="add_cart_popup_total_price">¥618.00</view>
+    </view>
+    <!-- 选好了，确认按钮 -->
+    <view class="add_cart_popup_confirm">
+      <t-button size="medium" theme="danger" block content="选好了" />
+    </view>
+  </view>
+  <!-- TODO 详情浮层，后面再做 -->
+</t-popup>

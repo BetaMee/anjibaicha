@@ -108,5 +108,17 @@ Page({
     this.setData({
       isShowProductInfo: e.detail.visible,
     });
-  }
+  },
+  // TODO 后期再重构，这里的交互逻辑不一样
+  onShowAddCart() {
+    console.log('isShowAddCart')
+    this.setData({
+      isShowAddCart: true
+    });
+  },
+  onAddCartVisibleChange(e) {
+    this.setData({
+      isShowAddCart: e.detail.visible,
+    });
+  },
 });
