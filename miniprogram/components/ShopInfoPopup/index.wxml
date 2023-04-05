@@ -25,7 +25,7 @@
       <t-cell title="Wechat-5345lkj" hover arrow>
         <t-icon
           slot="left-icon"
-          name='logo-wechat'
+          name='logo-wecom'
           size="24px"
           data-type="prefix"
         />
@@ -34,6 +34,14 @@
         <t-icon
           slot="left-icon"
           name='location'
+          size="24px"
+          data-type="prefix"
+        />
+      </t-cell>
+      <t-cell title="成为代理商" hover arrow >
+        <t-icon
+          slot="left-icon"
+          name='usergroup-add'
           size="24px"
           data-type="prefix"
         />
