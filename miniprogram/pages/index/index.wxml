@@ -1,49 +1,66 @@
 <!--index.wxml-->
 <view class="container">
   <!-- 头部导航区域 -->
-  <view class="home_container">
-    <!-- 客服组件 -->
-    <HomeServiceHeader />
-    <!-- 店铺头像 -->
-    <view class="shop_zone">
-      <view class="shop_container">
-        <view class="shop_image">
-          <t-avatar
-            image="https://tdesign.gtimg.com/miniprogram/images/avatar1.png"
-            shape="circle"
-            size="48px"
-          />
-        </view>
-        <view class="shop_info">
-          <text class="shop_name">安吉白茶店铺</text>
-          <text class="shop_des">免费配送</text>
-        </view>
-        <view class="shop_show_more">
-          <t-icon
-            name='chevron-down'
-            size="48rpx"
-            data-name="desktop"
-            data-type="prefix"
-          />
-        </view>
-      </view>
-      <view class="shop_pay_qrcode">
+  <HomeServiceHeader>
+    <!-- 计算公式：75 是店铺高度；12 是 margin 高度；48 是补偿高度 -->
+    <view class="home_container" style="height: {{navHeight + 120 + 12 + 60}}px">
+      <!-- 客服组件 -->
+      <view class="shop_service_nav" style="height: {{navHeight}}px; padding-top: {{navTop}}px">
         <t-icon
-          name='qrcode'
-          size="64rpx"
-      />
+          name='add-circle'
+          color="#f6f6f6"
+          size="48rpx"
+        />
+      </view>
+      <!-- 店铺头像 -->
+      <view class="shop_zone" style="height: 120px">
+        <view class="shop_container" bindtap="onShowShopName">
+          <view class="shop_image">
+            <t-avatar
+              image="https://tdesign.gtimg.com/miniprogram/images/avatar1.png"
+              shape="circle"
+              size="48px"
+            />
+          </view>
+          <view class="shop_info">
+            <text class="shop_name">安吉白茶店铺</text>
+            <text class="shop_des">免费配送</text>
+          </view>
+          <view class="shop_show_more">
+            <t-icon
+              name='chevron-down'
+              size="48rpx"
+              data-type="prefix"
+              color="#f6f6f6"
+            />
+          </view>
+        </view>
+        <view class="shop_pay_qrcode">
+          <t-icon
+            name='qrcode'
+            size="76rpx"
+            color="#f6f6f6"
+          />
+          <text>付款</text>
+        </view>
       </view>
     </view>
-  </view>
+  </HomeServiceHeader>
   <!-- 内容区域 -->
-  <view class="shop_content_wrapper" style="height: calc(100vh - {{navHeight}}px - 75px - 12px)">
+  <view class="shop_content_wrapper" style="height: calc(100vh - {{navHeight}}px - 120px - 12px - 60px)">
     <!-- 我的订单 -->
     <view class="shop_content_my_order">
-      <view>免配送费</view>
-      <view>我的订单</view>
+      <view class="shop_content_my_order_tip">免配送费</view>
+      <view class="shop_content_my_order_entry">
+        <t-icon
+          name='bulletpoint'
+          size="24rpx"
+        />
+        <text>我的订单</text>
+      </view>
     </view>
     <!-- 产品列表 -->
-    <scroll-view class="shop_content_list" scroll-y scroll-with-animation>
+    <scroll-view class="shop_content_list" scroll-y="true" scroll-with-animation>
       <view wx:for="{{categories}}" wx:key="index" class="shop_content_item">
         <!-- 产品介绍 -->
         <view class="shop_content_item_product">
@@ -57,34 +74,25 @@
           </view>
         </view>
         <!-- 添加到购物车里 -->
-        <view class="shop_content_item_select">1</view>
+        <view class="shop_content_item_select">
+          <t-icon
+            name='add-rectangle'
+            size="24px"
+            data-type="prefix"
+          />
+          <view>10</view>
+          <t-icon
+            name='add-rectangle'
+            size="24px"
+            data-type="prefix"
+          />
+        </view>
       </view>
     </scroll-view>
   </view>
-  <!-- <view class="side-bar-wrapper" style="height: calc(100vh - {{navHeight}}px - 75px - 12px)">
-    <t-side-bar value="{{sideBarIndex}}" bind:change="onSideBarChange">
-      <t-side-bar-item
-        wx:for="{{categories}}"
-        wx:key="index"
-        value="{{item.value || index}}"
-        label="{{item.label}}"
-        badge-props="{{item.badgeProps}}"
-      />
-    </t-side-bar>
-    <scroll-view class="content" scroll-y scroll-with-animation scroll-top="{{scrollTop}}" bind:scroll="onScroll">
-      <view wx:for="{{categories}}" wx:key="index" class="section">
-        <view class="title">{{item.title || item.label}}</view>
-        <t-grid column="{{3}}" border="{{false}}">
-          <block wx:for="{{item.items}}" wx:key="index" wx:for-item="cargo">
-            <t-grid-item
-              text="{{cargo.label}}"
-              image="{{cargo.image}}"
-              image-props="{{ { shape: 'round', lazy: true } }}"
-            >
-            </t-grid-item>
-          </block>
-        </t-grid>
-      </view>
-    </scroll-view>
-  </view> -->
+  <!-- 店铺信息弹层 -->
+  <ShopInfoPopup
+    visible="{{isShowShopInfo}}"
+    bind:onVisibleChange="onShopInfoVisibleChange"
+  />
 </view>

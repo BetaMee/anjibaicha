@@ -1,0 +1,43 @@
+<t-popup visible="{{visible}}" placement="{{'bottom'}}" bind:visible-change="onVisibleChange">
+  <view class="shop_info_popup">
+    <!-- 店铺头像 -->
+    <view class="shop_info_popup_header">
+      <view class="shop_info_popup_header_logo">
+        <t-avatar
+          image="https://tdesign.gtimg.com/miniprogram/images/avatar1.png"
+          shape="circle"
+          size="48px"
+        />
+      </view>
+      <view class="shop_info_popup_header_name">安吉白茶店铺</view>
+      <view class="shop_info_popup_header_des">全城配送</view>
+    </view>
+    <!-- 店铺信息列表 -->
+    <view class="shop_info_popup_list">
+      <t-cell title="1533509999" hover arrow>
+        <t-icon
+          slot="left-icon"
+          name='call'
+          size="24px"
+          data-type="prefix"
+        />
+      </t-cell>
+      <t-cell title="Wechat-5345lkj" hover arrow>
+        <t-icon
+          slot="left-icon"
+          name='logo-wechat'
+          size="24px"
+          data-type="prefix"
+        />
+      </t-cell>
+      <t-cell title="单行标题" hover arrow >
+        <t-icon
+          slot="left-icon"
+          name='location'
+          size="24px"
+          data-type="prefix"
+        />
+      </t-cell>
+    </view>
+  </view>
+</t-popup>

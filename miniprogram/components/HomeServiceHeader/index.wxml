@@ -1,9 +1,4 @@
-<view class="home_service_nav" style="height: {{navHeight}}px; padding-top:{{navButtonHeight}}px">
-  <view class="service_nav_icon">
-    <t-icon
-      name='add-circle'
-      size="48rpx"
-      data-name="desktop"
-    />
-  </view>
+<view class="home_service_component" style="height: {{navHeight + 120 + 12 + 60}}px">
+  <view class="home_service_component_bg"></view>
+  <slot></slot>
 </view>

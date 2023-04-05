@@ -12,8 +12,6 @@ App({
         this.globalData.navHeight =  statusBarHeight +  height  + (top -  statusBarHeight)*2;
         this.globalData.navTop  = top; // 胶囊距离顶部距离
         this.globalData.navButtonHeight =  height; // 胶囊本身的高度
-
-        console.log('this.globalData', this.globalData, res.statusBarHeight)
       },
       fail(err) {
         console.log(err);
