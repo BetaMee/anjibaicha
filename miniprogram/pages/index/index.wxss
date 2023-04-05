@@ -56,6 +56,19 @@ page {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+
+.shop_pay_qrcode::before {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 80rpx;
+  display: inline-block;
+  background-color: rgba(255, 251, 251, 0.4);
 }
 
 .shop_pay_qrcode text{
@@ -74,7 +87,14 @@ page {
 }
 
 .shop_show_more {
-  margin-left: 16px;
+  width: 36rpx;
+  height: 36rpx;
+  background-color: rgba(200, 200, 200, 0.6);
+  border-radius: 36rpx;
+  margin-left: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .shop_content_wrapper {

@@ -19,7 +19,7 @@
             <t-avatar
               image="https://tdesign.gtimg.com/miniprogram/images/avatar1.png"
               shape="circle"
-              size="48px"
+              size="52px"
             />
           </view>
           <view class="shop_info">
@@ -29,7 +29,7 @@
           <view class="shop_show_more">
             <t-icon
               name='chevron-down'
-              size="48rpx"
+              size="32rpx"
               data-type="prefix"
               color="#f6f6f6"
             />
