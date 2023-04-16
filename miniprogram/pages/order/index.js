@@ -1,0 +1,5 @@
+Page({
+  onload() {
+    wx.hideHomeButton();
+  }
+});

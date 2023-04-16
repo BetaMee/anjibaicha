@@ -1,1 +1,52 @@
-<view>DDD</view>
+<view class="pay_container">
+  <!-- 选择地址 -->
+  <view class="pay_address"></view>
+  <!-- 商品信息 -->
+  <view class="pay_product_info">
+    <!-- 总计商品 -->
+    <view class="pay_product_info_total">共2件商品</view>
+    <!-- 商品列表 -->
+    <view class="pay_product_info_list">
+      <!-- 列表 -->
+      <view class="pay_product_info_list_item">
+        <view class="pay_product_info_item_content">
+          <view class="pay_product_info_item">
+            <view class="pay_product_item_image">
+              <image src="https://tdesign.gtimg.com/miniprogram/images/example2.png" alt="" mode="aspectFill"/>
+            </view>
+            <view class="pay_product_item_name">C级安吉白茶500g</view>
+          </view>
+          <view class="pay_product_item_count">x1</view>
+        </view>
+        <view class="pay_product_item_price">¥680.00</view>
+      </view>
+      <!-- 列表 -->
+      <view class="pay_product_info_list_item">
+        <view class="pay_product_info_item_content">
+          <view class="pay_product_info_item">
+            <view class="pay_product_item_image">
+              <image src="https://tdesign.gtimg.com/miniprogram/images/example2.png" alt="" mode="aspectFill"/>
+            </view>
+            <view class="pay_product_item_name">C级安吉白茶500g</view>
+          </view>
+          <view class="pay_product_item_count">x1</view>
+        </view>
+        <view class="pay_product_item_price">¥680.00</view>
+      </view>
+    </view>
+    <!-- 合计 -->
+    <view class="pay_product_item_totalprice">合计<text>¥619.0</text></view>
+    <!-- 备注 -->
+    <view class="pay_product_notes">备注</view>
+  </view>
+  <!-- 付款 Fixed-->
+  <view class="pay_product_payment">
+    <view class="pay_product_payment_total">
+      合计
+      <text>¥619.0</text>
+    </view>
+    <view class="pay_product_payment_action">
+       <t-button size="medium" theme="danger" block content="付款" />
+    </view>
+  </view>
+</view>

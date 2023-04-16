@@ -1,0 +1,167 @@
+<!--
+此文件为开发者工具生成，生成时间: 2023/4/6下午11:13:05
+使用方法：
+在 /Users/gongxq/WeChatProjects/anjibaicha/miniprogram/pages/index/index.wxml 引入模板
+
+```
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+
+在 /Users/gongxq/WeChatProjects/anjibaicha/miniprogram/pages/index/index.wxss 中引入样式
+```
+@import "./index.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="container">
+      <view is="components/HomeServiceHeader/index">
+        <view class="HomeServiceHeader-index--home_service_component" style="height: 260px">
+          <view class="HomeServiceHeader-index--home_service_component_bg sk-image"></view>
+          <view class="home_container" style="height: 260px">
+            <view class="shop_service_nav" style="height: 68px; padding-top: 28px">
+              <view is="miniprogram_npm/tdesign-miniprogram/icon/icon">
+                <view class="t-icon icon--t-icon  " style="color: #f6f6f6; font-size: 23px;">
+                  <label class="t-icon-service icon--t-icon-service t-icon-base icon--t-icon-base sk-pseudo sk-pseudo-circle"></label>
+                </view>
+              </view>
+            </view>
+            <view class="shop_zone" style="height: 120px">
+              <view class="shop_container">
+                <view class="shop_image">
+                  <view is="miniprogram_npm/tdesign-miniprogram/avatar/avatar">
+                    <view class="t-avatar__wrapper avatar--t-avatar__wrapper  " style="true">
+                      <view is="miniprogram_npm/tdesign-miniprogram/badge/badge">
+                        <view class="t-badge badge--t-badge  avatar--undefined" style="true">
+                          <view class="t-badge__content badge--t-badge__content avatar--undefined">
+                            <view class="t-avatar avatar--t-avatar t-avatar--circle avatar--t-avatar--circle " style="width:52px;height:52px;font-size:21.5px;">
+                              <view is="miniprogram_npm/tdesign-miniprogram/image/image" style="true">
+                                <image class="avatar--t-image avatar--t-avatar__image t-image image--t-image t-image--shape-round image--t-image--shape-round sk-image" mode="aspectFill" style="true"></image>
+                              </view>
+                            </view>
+                          </view>
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="shop_info">
+                  <text class="shop_name sk-transparent sk-text-14-2857-730 sk-text">安吉白茶店铺</text>
+                  <text class="shop_des sk-transparent sk-text-14-2857-630 sk-text">免费配送</text>
+                </view>
+                <view class="shop_show_more">
+                  <view is="miniprogram_npm/tdesign-miniprogram/icon/icon" data-type="prefix">
+                    <view class="t-icon icon--t-icon  " style="color: #f6f6f6; font-size: 15px;">
+                      <label class="t-icon-chevron-down icon--t-icon-chevron-down t-icon-base icon--t-icon-base sk-pseudo sk-pseudo-circle"></label>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="shop_pay_qrcode sk-pseudo sk-pseudo-circle">
+                <view is="miniprogram_npm/tdesign-miniprogram/icon/icon">
+                  <view class="t-icon icon--t-icon  " style="color: #f6f6f6; font-size: 36px;">
+                    <label class="t-icon-qrcode icon--t-icon-qrcode t-icon-base icon--t-icon-base sk-pseudo sk-pseudo-circle"></label>
+                  </view>
+                </view>
+                <text class="sk-transparent sk-text-14-2857-887 sk-text">付款</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="shop_content_wrapper" style="height: calc(100vh - 68px - 120px - 12px - 60px)">
+        <view class="shop_content_my_order">
+          <view class="shop_content_my_order_tip sk-transparent sk-text-14-2857-812 sk-text">免配送费</view>
+          <view class="shop_content_my_order_entry">
+            <view is="miniprogram_npm/tdesign-miniprogram/icon/icon">
+              <view class="t-icon icon--t-icon  " style="color: #1677ff; font-size: 15px;">
+                <label class="t-icon-bulletpoint icon--t-icon-bulletpoint t-icon-base icon--t-icon-base sk-pseudo sk-pseudo-circle"></label>
+              </view>
+            </view>
+            <text class="sk-transparent sk-text-14-2857-511 sk-text">我的订单</text>
+          </view>
+        </view>
+        <scroll-view scroll-with-animation="true" class="shop_content_list" scroll-y="true">
+          <view class="shop_content_item">
+            <view class="shop_content_item_product">
+              <view class="shop_content_item_image">
+                <image mode="aspectFill" class="sk-image"></image>
+              </view>
+              <view class="shop_content_item_block">
+                <view class="shop_content_item_title sk-transparent sk-text-14-2857-232 sk-text">c级安吉白茶500g</view>
+                <view class="shop_content_item_des sk-transparent sk-text-14-2857-547 sk-text">这是一些描述</view>
+                <view class="shop_content_item_price sk-transparent sk-text-14-2857-990 sk-text">¥618.00</view>
+              </view>
+            </view>
+            <view class="shop_content_item_select">
+              <view is="miniprogram_npm/tdesign-miniprogram/icon/icon" data-type="prefix">
+                <view class="t-icon icon--t-icon  " style="font-size: 24px;">
+                  <label class="t-icon-minus-rectangle icon--t-icon-minus-rectangle t-icon-base icon--t-icon-base sk-pseudo sk-pseudo-circle"></label>
+                </view>
+              </view>
+              <view class="sk-transparent sk-text-14-2857-730 sk-text">10</view>
+              <view is="miniprogram_npm/tdesign-miniprogram/icon/icon" data-type="prefix">
+                <view class="t-icon icon--t-icon  " style="font-size: 24px;">
+                  <label class="t-icon-add-rectangle icon--t-icon-add-rectangle t-icon-base icon--t-icon-base sk-pseudo sk-pseudo-circle"></label>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="shop_content_item">
+            <view class="shop_content_item_product">
+              <view class="shop_content_item_image">
+                <image mode="aspectFill" class="sk-image"></image>
+              </view>
+              <view class="shop_content_item_block">
+                <view class="shop_content_item_title sk-transparent sk-text-14-2857-682 sk-text">c级安吉白茶500g</view>
+                <view class="shop_content_item_des sk-transparent sk-text-14-2857-678 sk-text">这是一些描述</view>
+                <view class="shop_content_item_price sk-transparent sk-text-14-2857-865 sk-text">¥618.00</view>
+              </view>
+            </view>
+            <view class="shop_content_item_select">
+              <view is="miniprogram_npm/tdesign-miniprogram/icon/icon" data-type="prefix">
+                <view class="t-icon icon--t-icon  " style="font-size: 24px;">
+                  <label class="t-icon-minus-rectangle icon--t-icon-minus-rectangle t-icon-base icon--t-icon-base sk-pseudo sk-pseudo-circle"></label>
+                </view>
+              </view>
+              <view class="sk-transparent sk-text-14-2857-909 sk-text">10</view>
+              <view is="miniprogram_npm/tdesign-miniprogram/icon/icon" data-type="prefix">
+                <view class="t-icon icon--t-icon  " style="font-size: 24px;">
+                  <label class="t-icon-add-rectangle icon--t-icon-add-rectangle t-icon-base icon--t-icon-base sk-pseudo sk-pseudo-circle"></label>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="shop_content_item">
+            <view class="shop_content_item_product">
+              <view class="shop_content_item_image">
+                <image mode="aspectFill" class="sk-image"></image>
+              </view>
+              <view class="shop_content_item_block">
+                <view class="shop_content_item_title sk-transparent sk-text-14-2857-486 sk-text">c级安吉白茶500g</view>
+                <view class="shop_content_item_des sk-transparent sk-text-14-2857-888 sk-text">这是一些描述</view>
+                <view class="shop_content_item_price sk-transparent sk-text-14-2857-48 sk-text">¥618.00</view>
+              </view>
+            </view>
+            <view class="shop_content_item_select">
+              <view is="miniprogram_npm/tdesign-miniprogram/icon/icon" data-type="prefix">
+                <view class="t-icon icon--t-icon  " style="font-size: 24px;">
+                  <label class="t-icon-minus-rectangle icon--t-icon-minus-rectangle t-icon-base icon--t-icon-base sk-pseudo sk-pseudo-circle"></label>
+                </view>
+              </view>
+              <view class="sk-transparent sk-text-14-2857-834 sk-text">10</view>
+              <view is="miniprogram_npm/tdesign-miniprogram/icon/icon" data-type="prefix">
+                <view class="t-icon icon--t-icon  " style="font-size: 24px;">
+                  <label class="t-icon-add-rectangle icon--t-icon-add-rectangle t-icon-base icon--t-icon-base sk-pseudo sk-pseudo-circle"></label>
+                </view>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</template>
